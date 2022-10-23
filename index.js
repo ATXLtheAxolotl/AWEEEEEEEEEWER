@@ -7,11 +7,15 @@ const client = bedrock.createClient({
 })
 
 
-client.on('text', (packet) => { // Listen for chat messages and echo them back.
+client.on('text', (packet) => { 
   const ORANGE = chalk.hex('#FFA500'); 
   const GREEN = chalk.hex('#00FF00'); 
   const YELLOW = chalk.hex('#FFFF00'); 
   const BLUE = chalk.hex('#0000FF'); 
+  const args = packet.message.slice().trim().split(/ +/);
+
+
+
 
 
   const STR = packet.message.toString()
