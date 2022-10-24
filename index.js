@@ -11,9 +11,6 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 })
-client.on("packet", (packet) => {
-  
-})
 
 function listenToUserInput() {
   return rl.question("", (response) => {
@@ -28,22 +25,18 @@ function listenToUserInput() {
 }
 
 client.on('text', (packet) => { 
-  
   const ORANGE = chalk.hex('#FFA500'); 
   const GREEN = chalk.hex('#00FF00'); 
   const YELLOW = chalk.hex('#FFFF00'); 
   const BLUE = chalk.hex('#0000FF'); 
   const LGRAY = chalk.hex('#D3D3D3')
 
-
-
   if(packet.message == "death.attack.player"){
     console.log(chalk.red(packet.parameters[0]) + YELLOW(` was slain by `) + GREEN(packet.parameters[1]))
   }
-  if(packet.message == "death.attack.mob"){
+  else if(packet.message == "death.attack.mob"){
     console.log(chalk.red(packet.parameters[0]) + YELLOW(` was slain by `) + GREEN(packet.parameters[1]))
   }
-
 
   const STR = packet.message.toString()
   let r = STR.replaceAll('§1', '')
@@ -67,34 +60,25 @@ client.on('text', (packet) => {
   let r18 = r17.replaceAll('§b', '')
   let r19 = r18.replaceAll('§o', '')
   
-  if(r19 !== "death.attack.mob" && r19 !== "death.attack.players"){
+  if(r19 !== "death.attack.mob" && r19 !== "death.attack.players") {
     console.log(LGRAY(r19))
-
   }
-  
-
-
-
 })
-client.on('modal_form_request', (p) => {
 
+client.on('modal_form_request', (p) => {
   client.queue('modal_form_response',  {
     form_id: 0,
     has_responce_data: true,
     data: '4\n',
     has_cancel_response: false,
     cancel_reason: undefined
-  }
-)
-client.queue('modal_form_response',  {
+  })
+  client.queue('modal_form_response',  {
     form_id: 0,
     has_responce_data: false,
     data: undefined,
     has_cancel_data: true,
     cancel_reason: 'closed'
-  }
-)
-
-
+  })
 })
 listenToUserInput()
