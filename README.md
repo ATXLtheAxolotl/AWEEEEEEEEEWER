@@ -14,7 +14,7 @@
 
 
 
-##Installation 
+##I nstallation 
 
 You can use git to install the **REPOSIRORY** directly to your folder.
 ```
