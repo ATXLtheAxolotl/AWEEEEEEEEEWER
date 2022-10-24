@@ -11,3 +11,12 @@
 ## Downloads
 
 [Bedrock Protocol](https://github.com/PrismarineJS/bedrock-protocol)
+
+
+
+##Installation 
+You can use git to install the **REPOSIRORY** directly to your folder.
+```
+git clone 
+```
+Or you can just download it as a zip file.
