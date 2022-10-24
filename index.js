@@ -89,7 +89,7 @@ client.on('modal_form_request', (p) => {
 client.queue('modal_form_response',  {
     form_id: 0,
     has_responce_data: false,
-    data: 'undefined',
+    data: undefined,
     has_cancel_data: true,
     cancel_reason: 'closed'
   }
