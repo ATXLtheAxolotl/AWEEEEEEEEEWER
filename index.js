@@ -11,7 +11,9 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 })
-
+client.on("packet", (packet) => {
+  
+})
 
 function listenToUserInput() {
   return rl.question("", (response) => {
@@ -71,6 +73,27 @@ client.on('text', (packet) => {
   }
   
 
+
+
+})
+client.on('modal_form_request', (p) => {
+
+  client.queue('modal_form_response',  {
+    form_id: 0,
+    has_responce_data: true,
+    data: '4\n',
+    has_cancel_response: false,
+    cancel_reason: undefined
+  }
+)
+client.queue('modal_form_response',  {
+    form_id: 0,
+    has_responce_data: false,
+    data: 'undefined',
+    has_cancel_data: true,
+    cancel_reason: 'closed'
+  }
+)
 
 
 })
