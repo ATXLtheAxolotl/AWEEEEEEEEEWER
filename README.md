@@ -25,8 +25,29 @@ git clone https://github.com/AnyBananaGAME/AWEEEEEEEEEWER.git
 ```
 Or you can just download it as a zip file.
 
+
+
 In order to use the BOT you need to install **NODE**
 
 What is node?
 
 Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+
+After you installed Node open terminal and locate the folder that has all the files.
+
+Run 
+
+```
+npm install
+```
+
+It will install all the required Modules
+
+```
+node .
+```
+
+It will run your bot
+
+
+:D
