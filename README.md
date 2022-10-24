@@ -29,7 +29,7 @@ Or you can just download it as a zip file.
 
 In order to use the BOT you need to install **NODE**
 
-What is node?
+## What is node?
 
 Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 
