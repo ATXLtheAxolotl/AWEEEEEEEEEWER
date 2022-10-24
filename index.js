@@ -38,6 +38,9 @@ client.on('text', (packet) => {
   if(packet.message == "death.attack.player"){
     console.log(chalk.red(packet.parameters[0]) + YELLOW(` was slain by `) + GREEN(packet.parameters[1]))
   }
+  if(packet.message == "death.attack.mob"){
+    console.log(chalk.red(packet.parameters[0]) + YELLOW(` was slain by `) + GREEN(packet.parameters[1]))
+  }
 
 
   const STR = packet.message.toString()
@@ -62,8 +65,10 @@ client.on('text', (packet) => {
   let r18 = r17.replaceAll('§b', '')
   let r19 = r18.replaceAll('§o', '')
   
+  if(r19 !== "death.attack.mob" && r19 !== "death.attack.players"){
+    console.log(LGRAY(r19))
 
-  console.log(LGRAY(r19))
+  }
   
 
 
