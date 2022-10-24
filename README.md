@@ -12,6 +12,9 @@
 
 [Bedrock Protocol](https://github.com/PrismarineJS/bedrock-protocol)
 
+[Node.js](https://nodejs.org/en/download/)
+
+
 
 
 ## Installation 
