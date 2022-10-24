@@ -21,7 +21,7 @@
 
 You can use git to install the **REPOSIRORY** directly to your folder.
 ```
-git clone 
+git clone https://github.com/AnyBananaGAME/AWEEEEEEEEEWER.git
 ```
 Or you can just download it as a zip file.
 
